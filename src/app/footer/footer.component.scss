@@ -1,0 +1,39 @@
+.my-footer-img{
+  width:60px
+}
+
+.play-store{
+  width: 150px !important;
+}
+.apple-store{
+  width: 130px !important;
+}
+
+@media screen and (max-width: 480px) {
+  .img-footer
+  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .my-footer-img{
+    width:40px
+  }
+
+  .play-store{
+    width: 110px !important;
+  }
+  .apple-store{
+    width: 90px !important;
+  }
+  .my-btn{
+    margin-top: 15px;
+  }
+
+  .my-support{
+    margin-top: 10px;
+  }
+  .my-input{
+    width: 100% !important;
+  }
+}

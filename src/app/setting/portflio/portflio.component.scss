@@ -1,0 +1,54 @@
+.my-profile{
+  width: 180px;
+  height: 180px;
+  background: #99c498;
+  border-radius: 50%;
+}
+
+h4{
+  color: #022715cc ;
+
+}
+.my-char
+{
+  font-size: 80px;
+}
+
+.my-portflio-bg
+{
+  background-color: #c1ffbf65;
+
+}
+.my-content-bg
+{
+  background-color: #c1ffbf31;
+
+}
+
+.my-portflio-btn button{
+  width: 200px;
+}
+
+@media screen and (max-width: 480px) {
+  h4{
+    font-size: 14px;
+
+  }
+
+.my-name-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.my-profile{
+  width: 150px;
+  height: 150px;
+  background: #99c498;
+  border-radius: 50%;
+}
+
+
+
+}

@@ -1,0 +1,13 @@
+.forget-password:hover
+{
+  transition: 0.3s;
+  color: #069206cb;
+
+}
+
+@media screen and (max-width: 480px) {
+  .forget-password{
+    font-size: 16px !important;
+  }
+
+}

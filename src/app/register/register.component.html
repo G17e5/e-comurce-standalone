@@ -1,0 +1,48 @@
+  <div class="container py-5">
+    <h2 class="pb-4">Register Now : </h2>
+    <p *ngIf="errorMassage" class="alert alert-danger text-center fs-4 fw-bold">{{errorMassage}}</p>
+
+    <form action="" (ngSubmit)="handelSubmit(registerForm)" [formGroup]="registerForm" >
+      <label for="name">Name :</label>
+      <input formControlName="name" type="text" id="name" class="form-control mb-2">
+      <div *ngIf="registerForm.get('name')?.errors && registerForm.get('name')?.touched" class="alert alert-danger ">
+        <p *ngIf="registerForm.get('name')?.getError('required')" class="m-0">Name is required</p>
+      </div>
+
+
+      <label for="email">Email :</label>
+      <input formControlName="email" type="text" id="email" class="form-control mb-2">
+      <div *ngIf="registerForm.get('email')?.errors && registerForm.get('email')?.touched" class="alert alert-danger ">
+        <p *ngIf="registerForm.get('email')?.getError('email')" class="m-0">Enter valid Email</p>
+        <p *ngIf="registerForm.get('email')?.getError('required')" class="m-0">email is required</p>
+      </div>
+
+      <label for="Password">Password :</label>
+      <input formControlName="password" type="password" id="Password" class="form-control mb-2">
+      <div *ngIf="registerForm.get('password')?.errors && registerForm.get('password')?.touched" class="alert alert-danger ">
+        <p *ngIf="registerForm.get('password')?.getError('pattern')" class="m-0">Password must start with uppercase then from 6 to 10 char</p>
+        <p *ngIf="registerForm.get('password')?.getError('required')" class="m-0">password is required</p>
+      </div>
+
+      <label for="rePassward">Repassward :</label>
+      <input formControlName="rePassword" type="password" id="rePassward" class="form-control mb-2">
+      <div *ngIf="registerForm.get('rePassword')?.errors && registerForm.get('rePassword')?.touched" class="alert alert-danger ">
+        <p *ngIf="registerForm.get('rePassword')?.getError('pattern')" class="m-0">rePassword must start with uppercase then from 6 to 10 char</p>
+        <p *ngIf="registerForm.get('rePassword')?.getError('required')" class="m-0">rePassword is required</p>
+      </div>
+
+
+      <label for="phone">Phone :</label>
+      <input formControlName="phone" type="tel" id="phone" class="form-control mb-2">
+      <div *ngIf="registerForm.get('phone')?.errors && registerForm.get('phone')?.touched" class="alert alert-danger ">
+        <p *ngIf="registerForm.get('phone')?.getError('pattern')" class="m-0">Enter valid Egyptian phone number</p>
+        <p *ngIf="registerForm.get('phone')?.getError('required')" class="m-0">phone is required</p>
+      </div>
+
+      <button [disabled]="registerForm.invalid" type="submit" class="btn btn-success my-1">
+        <span *ngIf="!isLoding">Register</span>
+        <i *ngIf="isLoding" class="fa-solid fa-spinner fa-spin px-3"></i>
+      </button>
+    </form>
+
+  </div>

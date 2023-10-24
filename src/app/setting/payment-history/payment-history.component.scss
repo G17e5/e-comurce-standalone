@@ -1,0 +1,21 @@
+img{
+  width: 100px;
+}
+
+.total-price{
+  background-color: #0d300c56;
+
+}
+
+.my-row{
+  border-color: #157347 !important;
+}
+
+@media screen and (max-width: 480px) {
+  .my-order{
+    font-size: 10px !important;
+  }
+  .my-order-data{
+    font-size: 12px !important;
+  }
+}

@@ -1,0 +1,17 @@
+<div class="w-50 mx-auto py-5">
+
+    <form action="" [formGroup]="shippingAddress" (ngSubmit)="handelSubmit(shippingAddress)">
+
+      <label for="details">Details</label>
+      <input type="text" name="" id="details" formControlName="details" class="form-control">
+
+      <label for="phone">Phone</label>
+      <input type="text" name="" id="phone" formControlName="phone" class="form-control">
+
+      <label for="city">City</label>
+      <input type="text" name="" id="city" formControlName="city" class="form-control">
+
+      <button class="btn btn-success my-3">Pay</button>
+
+    </form>
+</div>

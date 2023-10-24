@@ -1,0 +1,38 @@
+<div class="container py-5">
+
+  <div class="row  g-4 align-items-start">
+   <div class="col-lg-3 col-md-12 my-name-icon d-flex justify-content-center align-items-center my-portflio-bg rounded-3">
+
+    <div class="d-flex flex-column align-items-center justify-content-center py-5">
+
+        <div  class="nav-item d-flex justify-content-center align-items-center  cursor-pointer my-profile mx-2">
+          <Span class="fw-bold  my-char">{{myData.name.toUpperCase().charAt(0)}}</Span>
+        </div>
+        <h2 class="h4 fw-bolder py-2 border-bottom border-1 border-black mt-3">Welcome {{myData.name.split(" ").splice(0,1).join(" ")}}</h2>
+
+
+        <div class="mt-4 d-flex flex-column justify-content-center align-items-center my-portflio-btn">
+          <button routerLink="accountInfo" class="btn btn-success ">Account Info</button>
+          <button [routerLink]="['payment-history' , myId]" class="btn btn-success my-3 ">Payment History</button>
+          <button routerLink="userSetting" class="btn btn-success ">Setting</button>
+
+        </div>
+
+    </div>
+   </div>
+
+   <div class="col-lg-9 col-md-12 my-content-bg rounded-3">
+    <div class="py-5 px-2">
+      <router-outlet ></router-outlet>
+    </div>
+
+   </div>
+
+
+  </div>
+
+ </div>
+
+
+
+<app-sloading *ngIf="isloadingPage"></app-sloading>
